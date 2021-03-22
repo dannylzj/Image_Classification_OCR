@@ -32,3 +32,6 @@ This prompted a new approach which requires not just a basic classification mode
 
 After consideration, PaddleOCR was chosen as the preferred solution as it was built for the purpose of text detection and recognition as opposed to YOLO which was built for object detection.
 
+### LogisticsOCR
+
+LogisticsOCR was built using PaddleOCR's deep learning models to specifically suit the the change in system requirements. More details on LogisticsOCR can be found [here](https://github.com/dannylzj/Image_Classification_OCR/tree/main/LogisticsOCR).
