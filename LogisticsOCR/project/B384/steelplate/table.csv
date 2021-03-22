@@ -1,0 +1,4 @@
+,filename,heat number,dimension,line1_confidence,grade,line2_confidence
+0,Image_0005.jpg,0911R36100,40*3048*8600,0.94403726,"Cannot detect grade, please check image directly",0.854234
+1,Image_0014.jpg,0909426200,25*2430*7500,0.94147706,S355ML,0.7857626
+2,Image_0040.jpg,0909426200,25*2438*7500,0.9586602,S355M1L,0.80195045
