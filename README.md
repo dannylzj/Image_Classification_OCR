@@ -2,7 +2,7 @@
 
 ## Project Description
 
-The current Logistics Steel Stock supply chain process is highly manual and time consuming. Steel stock tags labelled by the respective Suppliers are currently being manually identified and handwritten by workers before submission to the Logistics Administrative Team for verification and entry into SAP. The aim of this project is to help automate the Steel Stock supply chain process by automatically identifying Stee Stock tags thus reducing the overall no. of manhours required for the receiving and issuing process.
+The current Logistics Steel Stock supply chain process is highly manual and time consuming. Steel stock tags labelled by the respective Suppliers are currently being manually identified and handwritten by workers before submission to the Logistics Administrative Team for verification and entry into SAP. The aim of this project is to help automate the Steel Stock supply chain process by automatically identifying Steel Stock tags thus reducing the overall no. of manhours required for the receiving and issuing process.
 
 The deliverables are a trained CNN model with a Python script to automatically detect and recognize text based on input images then output it onto a .csv file which can then be used to do auto verification with Mill Certificates and RPA for data entry into SAP in future.
 
