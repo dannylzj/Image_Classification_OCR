@@ -1,26 +1,30 @@
-# Deep Learning Models
+# Steel Stock Heat Number Digitization System for Logistics Supply Chain Management
 
-A collection of various deep learning architectures and models for TensorFlow in Jupyter Notebooks used while working on a 5 months internship project under the Graduate Certificate in Intelligent Reasoning Systems Programme with NUS Institute of Systems Science and Keppel FELS Ltd.
+## Project Description
 
-## Aim
+The current Logistics Steel Stock supply chain process is highly manual and time consuming. Steel stock tags labelled by the respective Suppliers are currently being manually identified and handwritten by workers before submission to the Logistics Administrative Team for verification and entry into SAP. The aim of this project is to help automate the Steel Stock supply chain process by automatically identifying Stee Stock tags thus reducing the overall no. of manhours required for the receiving and issuing process.
 
-The aim of these models was to accurately classify text regions of interest (ROI) on images taken from Steel Stock into 3 classes:
-1) Heat Number
-2) Dimension
-3) Grade
+The deliverables are a trained CNN model with a Python script to automatically detect and recognize text based on input images then output it onto a .csv file which can then be used to do auto verification with Mill Certificates and RPA for data entry into SAP in future.
 
-The ROI will then be put through an OCR engine such as Tesseract to do text recognition. The classification and recognized text will be tabulated onto a csv file.
+## Original System Design
 
-## Image Dataset
+The original system design was to classify and OCR text regions based on user interaction via a mobile application.
 
-The image dataset was a collection of tags manually photographed. The ROI is then labelled using [SuperAnnotate](https://superannotate.com/). The .json file generated is processed to batch crop ROI from the images and resized to 224px x 224px as input into the CNN models.
+### Image Acquisition & Preprocessing
 
-A copy of the processed images into train and test sets can be downloaded from the following [link](https://drive.google.com/file/d/1D5pIKTIhzl5UDrNeoXvYQlfWWsFzGDs-/view?usp=sharing).
+The image dataset is a collection of tags labelled on Steel Stock by various Suppliers manually photographed using various mobile phone cameras. The ROI is then labelled using [SuperAnnotate](https://superannotate.com/). The .json file generated is processed to batch crop ROI from the images and resized to 224px x 224px as input into the CNN models.
 
-## Convolutional Neural Networks
+### Image Augmentation
 
-1) Convolutional Neural Network VGG-16
-2) Convolutional Neural Network ResNet152v2
-3) Convolutional Neural Network InceptionResNetv2
-4) Convolutional Neural Network Xception
+Due to the lack of image data provided by the Sponsor, image augmentation was done in Keras to artificially expand the image dataset to improve the performance and ability of the model to generalize. As we are working with OCR of text data, image flipping was not used in augmentation.
+
+### Convolutional Neural Networks
+
+As this is primarily an image classification task, CNN was chosen as the preferred algorithm. A collection of 4 CNN models built can be found [here](https://github.com/dannylzj/Image_Classification_OCR/tree/main/notebooks).
+
+## Change in System Requirements
+
+A change in system requirements was initiated by the Sponsor as the original system design still requires the user to select regions of interest before sending it into the model for inference. The Sponsor feels that this is not automated enough and a new employee not trained in the task would not know what to select.
+
+
 
