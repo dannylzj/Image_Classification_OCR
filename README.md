@@ -24,7 +24,11 @@ As this is primarily an image classification task, CNN was chosen as the preferr
 
 ## Change in System Requirements
 
-A change in system requirements was initiated by the Sponsor as the original system design still requires the user to select regions of interest before sending it into the model for inference. The Sponsor feels that this is not automated enough and a new employee not trained in the task would not know what to select.
+A change in system requirements was initiated by the Sponsor as the original system design still required the user to select regions of interest before sending it into the model for inference. The Sponsor feels that this is not automated enough and a new employee not trained in the task would not know what to select.
 
+This prompted a new approach which requires not just a basic classification model but a detection and recognition algorithm. 2 end-to-end deep learning models were considered for this application
+1) YOLO
+2) PaddleOCR
 
+After consideration, PaddleOCR was chosen as the preferred solution as it was built for the purpose of text detection and recognition as opposed to YOLO which was built for object detection.
 
